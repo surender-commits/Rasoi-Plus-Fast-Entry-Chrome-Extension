@@ -1,0 +1,34 @@
+{
+    "name": "Rasoi Plus - Fast Entry",
+    "description": "Rasoi Plus - Fast Entry for Extra Functions.",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "icons": {
+        "16": "icon.png",
+        "32": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [                
+                "up.png",
+                "add.png",
+                "down.png"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://indirarasoir.rajasthan.gov.in/AddTransaction.aspx"
+            ],
+            "js": [
+                "content-script.js"
+            ]
+        }
+    ]
+}
